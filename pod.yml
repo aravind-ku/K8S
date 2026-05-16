@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+
+spec:
+  containers:
+    - name: cont-3
+      image: ubuntu
+      resources:
+        requests:
+          memory: "900Mi"
+          cpu: "700m"
+...

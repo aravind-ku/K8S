@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydp
+
+spec:
+  replicas: 3
+  selector:
+    matchLabel:
+      env: dev
+
+  template:
+    metadata:
+      labels:
+        env: dev
+
+    spec:
+      containers:
+        - name: cont1
+          image: aravind53/repos:farm
+          ports:
+            - containerPort: 80
+...
